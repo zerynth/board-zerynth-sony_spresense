@@ -1,0 +1,99 @@
+/* Port definition */
+
+////LAYOUT: 
+////PERIPHERALS: SERIAL0 SERIAL1 I2C0 SPI0 ADC0 PWMD0
+////CDEFINES: CONFIG_CXD56_I2C0 CONFIG_CXD56_SPI4 CONFIG_CXD56_SPI5 CONFIG_CXD56_LPADC0 CONFIG_CXD56_LPADC1 CONFIG_CXD56_LPADC2 CONFIG_CXD56_LPADC3 CONFIG_CXD56_HPADC0 CONFIG_CXD56_HPADC1 CONFIG_CXD56_PWM0 CONFIG_CXD56_PWM1 CONFIG_CXD56_PWM2 CONFIG_CXD56_PWM3
+
+const PinInfo const _vhalpinmap[] STORED = {
+    /* D0   */ MAKE_PIN(PA,  68,  HAS_EXT),           // UART2 RX
+    /* D1   */ MAKE_PIN(PA,  67,  HAS_EXT),           // UART2 TX
+    /* D2   */ MAKE_PIN(PA,  31,  HAS_EXT),           // HIF IRQ OUT
+    /* D3   */ MAKE_PIN(PA,  49,  HAS_EXT | HAS_ATM), // PWM3
+    /* D4   */ MAKE_PIN(PA,  29,  HAS_EXT),           // SPI2 MOSI
+    /* D5   */ MAKE_PIN(PA,  47,  HAS_EXT | HAS_ATM), // PWM1
+    /* D6   */ MAKE_PIN(PA,  46,  HAS_EXT | HAS_ATM), // PWM0
+    /* D7   */ MAKE_PIN(PA,  39,  HAS_EXT),           // SPI3 CS1 X
+    /* D8   */ MAKE_PIN(PA,  30,  HAS_EXT),           // SPI2 MISO
+    /* D9   */ MAKE_PIN(PA,  48,  HAS_EXT | HAS_ATM), // PWM2
+    /* D10  */ MAKE_PIN(PA,  71,  HAS_EXT),           // SPI4 CS X
+    /* D11  */ MAKE_PIN(PA,  73,  HAS_EXT),           // SPI4 MOSI
+    /* D12  */ MAKE_PIN(PA,  74,  HAS_EXT),           // SPI4 MISO
+    /* D13  */ MAKE_PIN(PA,  72,  HAS_EXT),           // SPI4 SCK
+    /* D14  */ MAKE_PIN(PA,  45,  HAS_EXT),           // I2C0 SDA
+    /* D15  */ MAKE_PIN(PA,  44,  HAS_EXT),           // I2C0 SCL
+    /* D16  */ MAKE_PIN(PA,  77,  HAS_EXT),           // SPI5 MOSI
+    /* D17  */ MAKE_PIN(PA,  78,  HAS_EXT),           // SPI5 MISO
+    /* D18  */ MAKE_PIN(PA,  96,  HAS_EXT),           // I2S0 DATA OUT
+    /* D19  */ MAKE_PIN(PA,  95,  HAS_EXT),           // I2S0 DATA IN
+    /* D20  */ MAKE_PIN(PA,  79,  HAS_EXT),           // EMMC DATA2
+    /* D21  */ MAKE_PIN(PA,  80,  HAS_EXT),           // EMMC DATA3
+    /* D22  */ MAKE_PIN(PA,  37,  HAS_EXT),           // SEN IRQ IN
+    /* D23  */ MAKE_PIN(PA,  75,  HAS_EXT),           // SPI5 SCK
+    /* D24  */ MAKE_PIN(PA,  76,  HAS_EXT),           // SPI5 CS X
+    /* D25  */ MAKE_PIN(PA,  94,  HAS_EXT),           // I2S0 LRCK
+    /* D26  */ MAKE_PIN(PA,  93,  HAS_EXT),           // I2S0 BCK
+    /* D27  */ MAKE_PIN(PA,  69,  HAS_EXT),           // UART2 CTS
+    /* D28  */ MAKE_PIN(PA,  70,  HAS_EXT),           // UART2 RTS
+
+    /* D29   */ MAKE_PIN(PA,  97,  HAS_EXT),           // LED0
+    /* D30   */ MAKE_PIN(PA,  98,  HAS_EXT),           // LED1
+    /* D31   */ MAKE_PIN(PA,  99,  HAS_EXT),           // LED2
+    /* D32   */ MAKE_PIN(PA, 100,  HAS_EXT),           // LED3
+};
+
+
+const PinClass const _analogclass[] STORED = {
+    /* first element should be pin, but it is ignored for this architecture */
+    /* x, channel, power, sub channel */
+    /* A0 */ MAKE_PIN_CLASS(0, 0 , 0, 0),
+    /* A1 */ MAKE_PIN_CLASS(1, 1 , 0, 1),
+    /* A2 */ MAKE_PIN_CLASS(2, 2 , 0, 2),
+    /* A3 */ MAKE_PIN_CLASS(3, 3 , 0, 3),
+    /* A4 */ MAKE_PIN_CLASS(4, 4 , 1, 0),
+    /* A5 */ MAKE_PIN_CLASS(5, 5 , 1, 1), 
+};
+
+const PinClass const _spiclass[] STORED = {
+    /* MOSI0 */ MAKE_PIN_CLASS(11, 0, 0, 0),
+    /* MISO0 */ MAKE_PIN_CLASS(12, 0, 0, 0),
+    /* SCK0 */ MAKE_PIN_CLASS(13, 0, 0, 0),
+};
+
+const PinClass const _i2cclass[] STORED = {
+    /* SDA0 */ MAKE_PIN_CLASS(14, 0, 0, 0),
+    /* SCL0 */ MAKE_PIN_CLASS(15, 0, 0, 0),
+};
+
+const PinClass const _pwmclass[] STORED = {
+    /* pin, pwm_num */
+    /* D3 */ MAKE_PIN_CLASS(3, 3, 0, 0),
+    /* D5 */ MAKE_PIN_CLASS(5, 1, 0, 0),
+    /* D6 */ MAKE_PIN_CLASS(6, 0, 0, 0),
+    /* D9 */ MAKE_PIN_CLASS(9, 2, 0, 0), 
+};
+
+const PinClass const _icuclass[] STORED = {
+};
+
+const PinClass const _canclass[] STORED = {
+};
+
+const PinClass const _serclass[] STORED = {
+    /* RX0 */ MAKE_PIN_CLASS(0, 0, 0, 0),
+    /* TX0 */ MAKE_PIN_CLASS(0, 0, 0, 0),
+    /* RX1 */ MAKE_PIN_CLASS(0, 0, 0, 0),
+    /* TX1 */ MAKE_PIN_CLASS(0, 0, 0, 0),
+};
+
+const PinClass const _dacclass[] STORED = {
+};
+
+const PinClass const _ledclass[] STORED = {
+    /* LED0 */ MAKE_PIN_CLASS(29, 0, 0, 0),
+    /* LED1 */ MAKE_PIN_CLASS(30, 0, 0, 0),
+    /* LED2 */ MAKE_PIN_CLASS(31, 0, 0, 0),
+    /* LED3 */ MAKE_PIN_CLASS(32, 0, 0, 0),
+};
+
+const PinClass const _btnclass[] STORED = {
+};

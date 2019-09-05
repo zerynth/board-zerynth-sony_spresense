@@ -1,1 +1,0 @@
-# board-zerynth-sony_spresense

@@ -1,0 +1,14 @@
+---
+description: Add support for Sony Spresense
+fullname: board.zerynth.sony_spresense
+info:
+    board: Sony Spresense
+    chip_manufacturer: Sony
+    device: Spresense
+    family_type: CXD5602
+keywords:
+- sony
+- spresense
+- board
+title: Sony Spresense Support Package
+...
