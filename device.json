@@ -1,21 +1,21 @@
 {
-    "name":"Sony Spresense",
-    "target":"sony_spresense",
-    "cc":"armgcc",
-    "classes":[
+    "name": "Sony Spresense",
+    "target": "sony_spresense",
+    "cc": "armgcc",
+    "classes": [
         "sony_spresense.SonySpresense"
     ],
-    "ram":384,
-    "flash":524288,
-    "family_type":"armcmx",
-    "family_name":"sonycxd5602",
-    "chip_model":"CXD5602",
+    "ram": 384,
+    "flash": 524288,
+    "family_type": "armcmx",
+    "family_name": "sonycxd5602",
+    "chip_model": "CXD5602",
     "manual_reset": 0,
-    "preferred_baud":115200,
-    "board_producer":"Sony",
-    "chip_manifacturer":"Sony",
-    "architecture":"cortex-m4",
-    "gccopts":{
+    "preferred_baud": 115200,
+    "board_producer": "Sony",
+    "chip_manifacturer": "Sony",
+    "architecture": "cortex-m4",
+    "gccopts": {
         "arch": [
             "-mcpu=cortex-m4",
             "-mthumb",
@@ -43,22 +43,25 @@
             "VM_DEFAULT_THREAD_SIZE=4096"
         ]
     },
-    "relocator":"cortex-m",
-    "vm_chunk":4096,
-    "type":"board",
-    "custom_actions": [  
-        ["burn_bootloader", "Burn Bootloader"]
+    "relocator": "cortex-m",
+    "vm_chunk": 4096,
+    "type": "board",
+    "custom_actions": [
+        [
+            "burn_bootloader",
+            "Burn Bootloader"
+        ]
     ],
-    "virtualizable":"SonySpresense",
-    "has_alter_ego":false,
+    "virtualizable": "SonySpresense",
+    "has_alter_ego": false,
     "uplink_reset": "reset",
     "reset_time": 4000,
-    "connection":{
-        "baudrate":115200,
-        "parity":"n",
-        "bytesize":8,
-        "stopbits":1,
-        "dsrdtr":false,
-        "rtscts":false
+    "connection": {
+        "baudrate": 115200,
+        "parity": "n",
+        "bytesize": 8,
+        "stopbits": 1,
+        "dsrdtr": false,
+        "rtscts": false
     }
 }

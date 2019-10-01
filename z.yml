@@ -4,8 +4,8 @@ fullname: board.zerynth.sony_spresense
 info:
     board: Sony Spresense
     chip_manufacturer: Sony
-    device: Spresense
-    family_type: CXD5602
+    device: CXD5602
+    family_type: ARM Cortex M4
 keywords:
 - sony
 - spresense
